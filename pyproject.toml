@@ -5,63 +5,20 @@ description = "uv-compatible fork of PyTorch implementation of MobileFaceNets"
 readme = "README.md"
 authors = [{ name = "Cylix Lee", email = "cylix.lee@outlook.com" }]
 requires-python = ">=3.13"
-dependencies = ["requests>=2.32.3", "tqdm>=4.67.1"]
+dependencies = [
+    "torch>=2.6.0",
+    "numpy>=2.2.3",
+    "requests>=2.32.3",
+    "tqdm>=4.67.1",
+]
 license = "Apache-2.0"
 
 [project.urls]
 Repository = "https://github.com/cylix-reproduction/mobilefacenet-pytorch"
 
-[project.optional-dependencies]
-cpu = ["torch>=2.6.0", "numpy>=2.2.3"]
-cu118 = ["torch>=2.6.0", "numpy>=2.2.3"]
-cu124 = ["torch>=2.6.0", "numpy>=2.2.3"]
-cu126 = ["torch>=2.6.0", "numpy>=2.2.3"]
-rocm624 = ["torch>=2.6.0", "numpy>=2.2.3"]
-
 [build-system]
 requires = ["pdm-backend"]
 build-backend = "pdm.backend"
-
-# If there's no existing `torch` dependency, you can add one by specifying extra dependency.
-[tool.uv.sources]
-torch = [
-    { index = "pytorch-cpu", extra = "cpu" },
-    { index = "pytorch-cu118", extra = "cu118" },
-    { index = "pytorch-cu124", extra = "cu124" },
-    { index = "pytorch-cu126", extra = "cu126" },
-    { index = "pytorch-rocm624", extra = "rocm624" },
-]
-
-# Index configuration
-
-[[tool.uv.index]]
-url = "https://pypi.tuna.tsinghua.edu.cn/simple"
-default = true
-
-[[tool.uv.index]]
-name = "pytorch-cpu"
-url = "https://download.pytorch.org/whl/cpu"
-explicit = true
-
-[[tool.uv.index]]
-name = "pytorch-cu118"
-url = "https://download.pytorch.org/whl/cu118"
-explicit = true
-
-[[tool.uv.index]]
-name = "pytorch-cu124"
-url = "https://download.pytorch.org/whl/cu124"
-explicit = true
-
-[[tool.uv.index]]
-name = "pytorch-cu126"
-url = "https://download.pytorch.org/whl/cu126"
-explicit = true
-
-[[tool.uv.index]]
-name = "pytorch-rocm624"
-url = "https://download.pytorch.org/whl/rocm6.2.4"
-explicit = true
 
 [tool.ruff]
 line-length = 120
