@@ -40,4 +40,5 @@ from mobilefacenet_pytorch import mobile_face_net
 net = mobile_face_net(pretrained=True)
 ```
 and then you get a pretrained MobileFaceNet. Your network should be always unblocked because the pretrained parameters
-binary is fetched from the [GitHub releases](https://github.com/cylix-reproduction/mobilefacenet-pytorch/releases) of this repo.
+binary is fetched from the [GitHub releases](https://github.com/cylix-reproduction/mobilefacenet-pytorch/releases) of
+this repo.
