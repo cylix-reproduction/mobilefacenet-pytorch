@@ -26,6 +26,12 @@ uv add git+https://github.com/cylix-reproduction/mobilefacenet-pytorch
 to download the latest version of this library. For more detailed information about **git installation**, see [Add a Git
 dependency](https://docs.astral.sh/uv/concepts/projects/dependencies/#git).
 
+> What about `pip`?
+>
+> `pip` support Git installation too, see [pip VCS Support](https://pip.pypa.io/en/stable/topics/vcs-support/#git). In
+> fact, most package manager supports installing a Python package from a Git repository. I'm not publishing to PyPI
+> because this is a forked repo. 
+
 ## Typical Usage
 To fetch a pretrained model, run:
 ```python
