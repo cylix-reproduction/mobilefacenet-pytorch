@@ -2,6 +2,13 @@
 
 This project is a **uv**-compatible fork of the [MobileFaceNet](https://github.com/foamliu/MobileFaceNet) repo.
 
+- [MobileFaceNet PyTorch](#mobilefacenet-pytorch)
+  - [Installation](#installation)
+    - [Case 1: PyTorch already installed](#case-1-pytorch-already-installed)
+    - [Case 2: PyTorch not installed yet](#case-2-pytorch-not-installed-yet)
+  - [Typical Usage](#typical-usage)
+
+
 > **Functionality Warning**
 >
 > This repo just simply preserves a `MobileFaceNet` implementation and a `mobile_face_net` function to get a pretrained
@@ -38,3 +45,13 @@ desired:
 >
 > This library does not require `torch` dependency in order to support `[extra_dependency]` installation feature.
 > However, it does not mean that this library is free of it. PyTorch is needed to use this library.
+
+## Typical Usage
+To fetch a pretrained model, run:
+```python
+from mobilefacenet_pytorch import mobile_face_net
+
+net = mobile_face_net(pretrained=True)
+```
+and then you get a pretrained MobileFaceNet. Your network should be always unblocked because the pretrained parameters
+binary is fetched from the [GitHub releases](https://github.com/cylix-reproduction/mobilefacenet-pytorch/releases) of this repo.
