@@ -20,5 +20,20 @@ Repository = "https://github.com/cylix-reproduction/mobilefacenet-pytorch"
 requires = ["pdm-backend"]
 build-backend = "pdm.backend"
 
-[tool.ruff]
-line-length = 120
+# # Development configurations. Comment out before publish.
+
+# [tool.uv.sources]
+# torch = { index = "pytorch-cpu" }
+# torchvision = { index = "pytorch-cpu" }
+
+# [[tool.uv.index]]
+# url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+# default = true
+
+# [[tool.uv.index]]
+# name = "pytorch-cpu"
+# url = "https://download.pytorch.org/whl/cpu"
+# explicit = true
+
+# [tool.ruff]
+# line-length = 120
