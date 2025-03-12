@@ -8,8 +8,8 @@ requires-python = ">=3.13"
 dependencies = [
     "torch>=2.6.0",
     "numpy>=2.2.3",
-    "requests>=2.32.3",
     "tqdm>=4.67.1",
+    "requests>=2",
 ]
 license = "Apache-2.0"
 
